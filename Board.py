@@ -47,12 +47,12 @@ class Board:
             for x, piece in enumerate(row):
                 if piece != '':
                     square = self.get_square_from_pos((x, y))
-                    # looking inside contents, what piece does it have
+                   
                     if piece[1] == 'R':
                         square.occupying_piece = Rook(
                             (x, y), 'white' if piece[0] == 'w' else 'black', self
                         )
-                    # as you notice above, we put `self` as argument, or means our class Board
+                    
                     elif piece[1] == 'N':
                         square.occupying_piece = Knight(
                             (x, y), 'white' if piece[0] == 'w' else 'black', self
@@ -157,4 +157,5 @@ class Board:
             self.turn = 'white'
             self.game_started = False
     def start_game(self):
+
         self.game_started = True
